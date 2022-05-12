@@ -1,24 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Calendar from "./component/Calendar/Calendar.jsx";
+import Login from "./view/Login.js";
+import SignUp from "./view/SignUp.js";
+import "./App.css";
+import "./component/Calendar/style.css"
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div>
+        <Routes>
+          <Route path="/" element={ <Calendar/>}/>
+          <Route path="/login" element={<Login/>}/>
+          <Route path="/signUp" element={<SignUp/>}/>
+          <Route path="/calendar" element={<Calendar/>}/>
+        </Routes>
+      </div>
+    </Router>
   );
 }
 
