@@ -1,6 +1,18 @@
 .logo {
     padding: 30px 10px 10px 25px;
-    width: 350px;
+    width: 250px;
     height: auto;
     
+}
+
+.div-header-registro-logo {
+    padding: 0px 0px 30px 25px;
+}
+
+.div-header-registro-button{
+    padding: 0px 10px 30px 25px;
+}
+
+.div-header-login-button{
+    padding: 0px 10px 30px 25px;
 }

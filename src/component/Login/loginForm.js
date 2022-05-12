@@ -40,8 +40,8 @@ class LoginForm extends React.Component{
             alignItems: 'center',
           }}
         >
-          <Avatar sx={{ m: 1, bgcolor: 'secondary.main' }}>
-            <LockOutlinedIcon />
+            <Avatar sx={{ m: 1, bgcolor: 'secondary.main' }}>
+            <img src="./images/logo_kun.png" class="logo-avatar" />
           </Avatar>
           <Typography component="h1" variant="h5">
             Iniciar Sesion

@@ -10,7 +10,7 @@ import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-
+import "./style.css";
   
   const theme = createTheme();
   
@@ -40,7 +40,7 @@ class SignUpForm extends React.Component {
           }}
         >
           <Avatar sx={{ m: 1, bgcolor: 'secondary.main' }}>
-            <LockOutlinedIcon />
+            <img src="./images/logo_kun.png" class="logo-avatar" />
           </Avatar>
           <Typography component="h1" variant="h5">
             Registro

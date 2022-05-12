@@ -11,8 +11,8 @@ const BootstrapButton = styled(Button)({
     '&:hover': {
       backgroundColor: '#FFFFFF',
       borderColor: '#FFFFFF',
-      color: '#103174'
-    },
+      color: '#103174',
+    }
 });
 
 
@@ -28,14 +28,18 @@ const LinkI = styled(Link)({
 class Header extends React.Component {
     render(){
         return (
-            <AppBar position="static" sx={{background:'#14395a', height:'120px'}}>
+            <AppBar position="static" sx={{background:'#14395a', height:'90px'}}>
                 <Toolbar>
-                <LinkI href="/" className='link'>
+                <div class="div-header-registro-logo ">
+                    <LinkI href="/" className='link'>
                         <img src="./images/SGL_logo-removebg-preview.png" alt="" className="logo" href='/'/>
                     </LinkI>
+                </div>
                 <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
                     </Typography>
+                    <div class="div-header-registro-button">
                     <BootstrapButton variant="inherit" href="/login">Iniciar Sesión</BootstrapButton>
+                    </div>   
                 </Toolbar>
             </AppBar>
         );
