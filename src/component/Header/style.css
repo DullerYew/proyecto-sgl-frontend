@@ -1,18 +1,71 @@
-.logo {
-    padding: 30px 10px 10px 25px;
+
+/*Estilos para el main header*/
+.div-header-main {
+    padding-bottom: 2em;
+    position: absolute;
+    left: -30px;
+}
+
+.div-header-main .logo {
+    padding-top: 2em;
     width: 250px;
-    height: auto;
+    height: auto; /*para evitar que se nos corte el texto*/
     
 }
 
-.div-header-registro-logo {
-    padding: 0px 0px 30px 25px;
-}
-
-.div-header-registro-button{
+.div-header-main-button-registro{
     padding: 0px 10px 30px 25px;
 }
 
-.div-header-login-button{
+.div-header-main-button-login{
     padding: 0px 10px 30px 25px;
+}
+
+
+
+/*Estilos para el header de login*/
+.div-header-login {
+    padding-bottom: 2em;
+    position: absolute;
+    left: -30px;
+}
+
+.div-header-login .logo {
+    padding-top: 2em;
+    width: 250px;
+    height: auto; /*para evitar que se nos corte el texto*/
+    
+}
+
+.div-header-login-button-registro{
+    padding: 0px 10px 30px 25px;
+}
+
+
+/* Estilos para el header de registro */
+.div-header-registro {
+    padding-bottom: 2em;
+    position: absolute;
+    left: -30px;
+}
+
+.div-header-registro .logo {
+    padding-top: 2em;
+    width: 250px;
+    height: auto; /*para evitar que se nos corte el texto*/
+    
+}
+
+.div-header-registro-button-login{
+    padding: 0px 10px 30px 25px;
+}
+
+
+.div-header-home {
+    padding-bottom: 2em;
+}
+
+
+.div-welcome-message{
+    padding-bottom: 2em;
 }

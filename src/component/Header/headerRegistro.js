@@ -16,13 +16,6 @@ const BootstrapButton = styled(Button)({
 });
 
 
-const LinkI = styled(Link)({
-    color: '#FFFFFF',
-    '&:hover': {
-      color: '#FFFFFF'
-    },
-
-});
 
 
 class Header extends React.Component {
@@ -30,17 +23,17 @@ class Header extends React.Component {
         return (
             <AppBar position="static" sx={{background:'#14395a', height:'90px'}}>
                 <Toolbar>
-                <div class="div-header-registro-logo ">
-                    <LinkI href="/" className='link'>
-                        <img src="./images/SGL_logo-removebg-preview.png" alt="" className="logo" href='/'/>
-                    </LinkI>
+                <div class="div-header-registro">
+                    <li>
+                        <a href="./"><img src='./images/SGL_logo-removebg-preview.png' onClick="./login" class="logo" /></a>
+                    </li>
                 </div>
                 <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
                     </Typography>
-                    <div class="div-header-registro-button">
-                    <BootstrapButton variant="inherit" href="/login">Iniciar Sesión</BootstrapButton>
-                    </div>   
-                </Toolbar>
+                    <div class="div-header-registro-button-login">
+                        <BootstrapButton variant="inherit" href="/login">Iniciar Sesión</BootstrapButton>
+                 </div>   
+                 </Toolbar>
             </AppBar>
         );
     }

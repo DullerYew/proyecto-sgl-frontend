@@ -25,7 +25,8 @@ const LinkI = styled(Link)({
 
 const AppBarStyled = styled(AppBar)({
     background:'#14395a',
-    height: '120px'
+    height: '90px',
+    width:'auto'
 });
 
 
@@ -34,13 +35,19 @@ class Header extends React.Component {
         return (
             <AppBarStyled position='static'>
                 <Toolbar>
-                <LinkI href="/" className='link'>
-                        <img src="./images/SGL_logo-removebg-preview.png" alt="" className="logo" href='/'/>
-                    </LinkI>
+                <div class="div-header-main ">
+                    <li>
+                    <a href="./"><img src='./images/SGL_logo-removebg-preview.png' onClick="./login" class="logo" /></a>
+                    </li>
+                </div>
                     <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
                     </Typography>
-                    <BootstrapButton variant="inherit" href="/login">Iniciar Sesión</BootstrapButton>
-                    <BootstrapButton variant="inherit" href="/SignUp" >Registrarse</BootstrapButton>
+                    <div class="div-header-main-button-login">
+                        <BootstrapButton variant="inherit" href="/login">Iniciar Sesión</BootstrapButton>
+                    </div>
+                    <div class="div-header-main-button-registro">
+                        <BootstrapButton variant="inherit" href="/signUp">Registrarme</BootstrapButton>
+                    </div>  
                 </Toolbar>
             </AppBarStyled>
         );

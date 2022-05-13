@@ -72,6 +72,7 @@ class LoginForm extends React.Component{
               fullWidth
               variant="contained"
               sx={{ mt: 3, mb: 2 }}
+              href="./dashboard"
             >
               Sign In
             </Button>
