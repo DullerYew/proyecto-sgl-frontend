@@ -33,7 +33,8 @@ const handleSubmit = (event) => {
       const data = new FormData(event.currentTarget);
       // eslint-disable-next-line no-console
       console.log({
-            lab: data.get('lab-select'),
+            reservation_id: data.get("reservation"),
+            lab: data.get('lab'),
             hour: data.get("hour-select"),
             date: data.get("date")
       });
@@ -56,21 +57,14 @@ function BasicDatePicker() {
   );
 }
 
-class AddReservationForm extends React.Component{
+class ModifyReservationForm extends React.Component{
     constructor() {
         super()
-        this.labs = ["LT", "LyCS", "Electrónica", "Cómputo", "Analítica"];
+        this.reservation = "R0001"
+        this.lab = "LT"
         this.hours = ["07:00-08:00", "12:00-13:00", "13:00-14:00", "17:00-18:00"]
 
-        //const [lab, setReservation] = React.useState('');
         //const handleChange = (event) => { setReservation(event.target.value); };
-
-        this.LabMenuItemList = []
-        for (let i = 0; i < this.labs.length; i++) {
-            this.LabMenuItemList.push(
-                <MenuItem value={this.labs[i]}>{this.labs[i]}</MenuItem>
-            );
-        }
 
         this.HourMenuItemList = []
         for (let i = 0; i < this.hours.length; i++) {
@@ -88,7 +82,7 @@ class AddReservationForm extends React.Component{
                     <Card sx={{ minWidth: 300 }}>
                         <CardContent>
                             <Typography component="h1" variant="h5">
-                                <b> Añadir nueva reservación </b>
+                                <b> Modificar reservación </b>
                             </Typography>
 
                             <br/>      
@@ -96,56 +90,33 @@ class AddReservationForm extends React.Component{
                             <Box sx={{ flexGrow: 1 }}>
                                 <Grid container justifyContent="center" spacing={5}>
                                     <Grid item>
-                                        <p><b>Laboratorio</b></p>
-                                        <Box component="form" onSubmit={handleSubmit} noValidate sx={{ mt: 1, marginLeft:0.1}}>
-                                            <Box sx={{ minWidth: 160 }}>
-                                              <FormControl fullWidth required>
-                                                    <InputLabel id="lab-input-label">Laboratorio</InputLabel>
-                                                    <Select
-                                                        labelId="lab-select-label"
-                                                        id="lab-select"
-                                                        label="Laboratiro"
-                                                    >
-                                                        {this.LabMenuItemList}
-                                                    </Select>
-                                              </FormControl>
-                                            </Box>
+                                        <p><b>Reservación</b></p>
+                                        <Box sx={{ width: 160 }}>
+                                            <TextField disabled defaultValue={this.reservation}/>
                                         </Box>
                                     </Grid>
                                     <Grid item>
-                                        <p><b>Hora</b></p>
-                                        <Box component="form" onSubmit={handleSubmit} noValidate sx={{ mt: 1, marginLeft:0.1}}>
-                                            <Box sx={{ minWidth: 160 }}>
-                                              <FormControl fullWidth required>
-                                                    <InputLabel id="hour-input-label">Hora</InputLabel>
-                                                    <Select
-                                                        labelId="hour-select-label"
-                                                        id="hour-select"
-                                                        label="Hora"
-                                                    >
-                                                        {this.HourMenuItemList}
-                                                    </Select>
-                                              </FormControl>
-                                            </Box>
+                                        <p><b>Laboratorio</b></p>
+                                        <Box sx={{ width: 160 }}>
+                                            <TextField disabled defaultValue={this.lab}/>
                                         </Box>
                                     </Grid>
                                 </Grid>
                             </Box>
-                            
-                            <Typography>
-                                <br/>
-                                <b>Correo del solicitante</b>
-                            </Typography>
 
+                            <br/>
 
-                            <TextField
-                                required
-                                fullWidth
-                                id="email"
-                                label="Correo electronico"
-                                name="email"
-                                autoComplete="email"
-                            />
+                            <p><b>Hora</b></p>
+                            <FormControl fullWidth required>
+                                <InputLabel id="hour-input-label">Hora</InputLabel>
+                                <Select
+                                    labelId="hour-select-label"
+                                    id="hour-select"
+                                    label="Hora"
+                                >
+                                    {this.HourMenuItemList}
+                                </Select>
+                            </FormControl>
 
                             <br/>
                             <br/>
@@ -170,4 +141,4 @@ class AddReservationForm extends React.Component{
     }
 }
 
-export default AddReservationForm;
+export default ModifyReservationForm;
