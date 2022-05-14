@@ -18,22 +18,19 @@ import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
 
-//import BasicSelect from '../BasicSelect/BasicSelect';
-
-
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-  
-    const theme = createTheme();
-  
-    // export default function SignIn() {
-    const handleSubmit = (event) => {
-          event.preventDefault();
-          const data = new FormData(event.currentTarget);
-          // eslint-disable-next-line no-console
-          console.log({
-                reservation_id: data.get('reservation-select')
-          });
-    };
+
+
+const theme = createTheme();
+
+const handleSubmit = (event) => {
+      event.preventDefault();
+      const data = new FormData(event.currentTarget);
+      // eslint-disable-next-line no-console
+      console.log({
+            reservation_id: data.get('reservation-select')
+      });
+};
 
 class DeleteReservationForm extends React.Component{
     constructor() {
@@ -58,16 +55,9 @@ class DeleteReservationForm extends React.Component{
                     <CssBaseline/>
                     <Card sx={{ minWidth: 300 }}>
                         <CardContent>
-                            <Box sx={{
-                                display: 'flex',
-                                flexDirection: 'column',
-                                alignItems: 'center'
-                            }}>
-                                
-                            </Box>
                             <Typography component="h1" variant="h5">
-                                    <b> Eliminar / Cancelar Reserva </b>
-                                </Typography>
+                                <b> Eliminar / Cancelar Reserva </b>
+                            </Typography>
 
                             <Typography>
                                 <br/>
@@ -102,11 +92,10 @@ class DeleteReservationForm extends React.Component{
                                 margin="normal"
                                 required
                                 fullWidth
-                                name="password"
+                                name="text"
                                 label='Escriba "Eliminar"'
-                                type="password"
-                                id="password"
-                                autoComplete="current-password"
+                                type="text"
+                                id="confirmation"
                             />
 
                             <br/>
