@@ -12,15 +12,17 @@ import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 
+import DatePicker from '../Datepicker/datepicker.js';
+
 
 import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
 
-import { AdapterDateFns } from '@mui/x-date-pickers/AdapterDateFns';
-import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
-import { DatePicker } from '@mui/x-date-pickers/DatePicker';
+//import { AdapterDateFns } from '@mui/x-date-pickers/AdapterDateFns';
+//import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
+//import { DatePicker } from '@mui/x-date-pickers/DatePicker';
 
 import { createTheme, ThemeProvider } from '@mui/material/styles';
   
@@ -40,6 +42,7 @@ const handleSubmit = (event) => {
       });
 };
 
+/*
 function BasicDatePicker() {
   const [value, setValue] = React.useState(null);
 
@@ -56,6 +59,7 @@ function BasicDatePicker() {
     </LocalizationProvider>
   );
 }
+*/
 
 class ModifyReservationForm extends React.Component{
     constructor() {
@@ -79,7 +83,7 @@ class ModifyReservationForm extends React.Component{
             <ThemeProvider theme={theme}>
                 <Container component="main" maxWidth="xs">
                     <CssBaseline/>
-                    <Card sx={{ minWidth: 300 }}>
+                    <Card sx={{ minWidth: 300, marginTop: -3}}>
                         <CardContent>
                             <Typography component="h1" variant="h5">
                                 <b> Modificar reservación </b>
@@ -87,17 +91,17 @@ class ModifyReservationForm extends React.Component{
 
                             <br/>      
 
-                            <Box sx={{ flexGrow: 1 }}>
+                            <Box sx={{ flexGrow: 1}}>
                                 <Grid container justifyContent="center" spacing={5}>
                                     <Grid item>
                                         <p><b>Reservación</b></p>
-                                        <Box sx={{ width: 160 }}>
+                                        <Box sx={{ width: 160, marginTop: 1}}>
                                             <TextField disabled defaultValue={this.reservation}/>
                                         </Box>
                                     </Grid>
                                     <Grid item>
                                         <p><b>Laboratorio</b></p>
-                                        <Box sx={{ width: 160 }}>
+                                        <Box sx={{ width: 160, marginTop: 1 }}>
                                             <TextField disabled defaultValue={this.lab}/>
                                         </Box>
                                     </Grid>
@@ -107,27 +111,30 @@ class ModifyReservationForm extends React.Component{
                             <br/>
 
                             <p><b>Hora</b></p>
-                            <FormControl fullWidth required>
-                                <InputLabel id="hour-input-label">Hora</InputLabel>
-                                <Select
-                                    labelId="hour-select-label"
-                                    id="hour-select"
-                                    label="Hora"
-                                >
-                                    {this.HourMenuItemList}
-                                </Select>
-                            </FormControl>
+                            <Box sx={{marginTop: 1}}>
+                                <FormControl fullWidth required>
+                                    <InputLabel id="hour-input-label">Hora</InputLabel>
+                                    <Select
+                                        labelId="hour-select-label"
+                                        id="hour-select"
+                                        label="Hora"
+                                    >
+                                        {this.HourMenuItemList}
+                                    </Select>
+                                </FormControl>
+                            </Box>
 
-                            <br/>
                             <br/>
 
                             <Typography>
                                 <b>Fecha</b>
                             </Typography>
 
-                            <BasicDatePicker id="date"/>
+                            <Box sx={{marginTop: 1}}>
+                                <DatePicker/>
+                            </Box>
 
-                            <br/>
+
                             <br/>
 
                             <Box sx={{ paddingLeft: 34 }}>
@@ -142,3 +149,4 @@ class ModifyReservationForm extends React.Component{
 }
 
 export default ModifyReservationForm;
+//<BasicDatePicker id="date"/>
