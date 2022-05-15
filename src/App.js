@@ -7,6 +7,7 @@ import SignUp from "./view/SignUp.js";
 import AddReservation from "./view/AddReservation.js";
 import ModifyReservation from "./view/ModifyReservation.js";
 import DeleteReservation from "./view/DeleteReservation.js";
+import RequestTable from "./component/RequestTable/RequestTable.js";
 import "./App.css";
 import "./component/Calendar/style.css"
 
@@ -21,6 +22,7 @@ function App() {
           <Route path="/addReservation" element={<AddReservation/>}/>
           <Route path="/modifyReservation" element={<ModifyReservation/>}/>
           <Route path="/deleteReservation" element={<DeleteReservation/>}/>
+          <Route path="/requestTable" element={<RequestTable/>}/>
           <Route path="/calendar" element={<Calendar/>}/>
         </Routes>
       </div>
