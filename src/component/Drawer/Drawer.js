@@ -48,34 +48,21 @@ export default function TemporaryDrawer() {
 
   const list = (anchor) => (
     <Box
-      sx={{ width: anchor === 'top' || anchor === 'bottom' ? 'auto' : 250 }}
+      sx={{ width: anchor === 'top' || anchor === 'bottom' ? 'auto' : 350 }}
       role="presentation"
       onClick={toggleDrawer(anchor, false)}
       onKeyDown={toggleDrawer(anchor, false)}
     >
       <List>
-        {[{ 'iconName': 'Inbox', 'page':'/foo'},{ 'iconName':'Starred','page':'/foo2'},{ 'iconName':'Send email','page':'/foo3'}, {'iconName':'Drafts','page':'/foo4'}].map((icon, index, array) => (
-          <ListItem key={icon.iconName} disablePadding >
-            <ListItemButton href={icon.page} >
-              <ListItemIcon>
-              {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-              </ListItemIcon>
-              <ListItemLink to={icon.page} text={icon.iconName} />
-            </ListItemButton>
-          </ListItem>
-        ))}
-      </List>
-      <Divider />
-      <List>
-        {['All mail', 'Trash', 'Spam'].map((text, index) => (
-          <ListItem key={text} disablePadding>
-            <ListItemButton>
-              <ListItemIcon>
-                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-              </ListItemIcon>
-              <ListItemText primary={text} />
-            </ListItemButton>
-          </ListItem>
+        {[{ 'iconName': 'Inicio', 'page':'/dashboard'},{ 'iconName':'Añadir reservacion de laboratorio','page':'/dashboard/addReservation'},{ 'iconName':'Send email','page':'/foo3'}, {'iconName':'Drafts','page':'/foo4'}].map((icon, index, array) => (
+            <ListItemLink to={icon.page} text={icon.iconName}>
+                <ListItemButton href={icon.page} >
+                  <ListItemIcon>
+                  {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+                  </ListItemIcon>
+              </ListItemButton>
+            </ListItemLink>
+            
         ))}
       </List>
     </Box>

@@ -1,0 +1,15 @@
+.selector-solicitud-folio{
+    position: relative;
+    bottom: 0.5em;
+}
+
+.button-solicitud-folio{
+    position:relative;
+    bottom: 2em;
+    left:15em;
+}
+
+.selector-lab-new{
+    position:relative;
+    top:-15px;
+}
