@@ -54,7 +54,7 @@ export default function TemporaryDrawer() {
       onKeyDown={toggleDrawer(anchor, false)}
     >
       <List>
-        {[{ 'iconName': 'Inicio', 'page':'/dashboard'},{ 'iconName':'Añadir reservacion de laboratorio','page':'/dashboard/addReservation'},{ 'iconName':'Send email','page':'/foo3'}, {'iconName':'Drafts','page':'/foo4'}].map((icon, index, array) => (
+        {[{ 'iconName': 'Inicio', 'page':'/dashboard'},{ 'iconName':'Añadir reservación de laboratorio','page':'/dashboard/addReservation'},{ 'iconName':'Modificar reservación de laboratorio','page':'/dashboard/modifyReservation'}, {'iconName':'Eliminar reservación de laboratorio','page':'/dashboard/deleteReservation'},{'iconName':'Lista de solicitudes','page':'/dashboard/requestTable'}].map((icon, index, array) => (
             <ListItemLink to={icon.page} text={icon.iconName}>
                 <ListItemButton href={icon.page} >
                   <ListItemIcon>
