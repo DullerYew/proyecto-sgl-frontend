@@ -19,8 +19,10 @@ export default function BasicCard(){
                 <CardContent>
                     <h2>Añadir reserva de mediante solicitud previa</h2>
                     <Divider />
-                    <p>
+                    <br/>
+                    <p> <b>
                         Folio de solicitud
+                        </b>
                     </p>
                     <div class="selector-solicitud-folio">
                         <SelectorFolio/>
